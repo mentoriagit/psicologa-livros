@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O que é estresse? — CPCS-SP | Centro de Controle de Stress-SP</title>
+<meta name="description" content="Entenda o que é o estresse, as quatro fases do modelo da Prof. Dra. Marilda Lipp (alerta, resistência, quase-exaustão e exaustão) e os sinais de que é hora de buscar ajuda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="canonical" href="https://www.estressesp.com.br/estresse.html">
+<style>
+/* fases do stress — cartões que empilham no scroll (sticky nativo) */
+.phases{display:grid;gap:1.4rem}
+.phase{
+  background:#fff;border-radius:26px;padding:2.4rem 2.6rem;position:sticky;top:96px;overflow:hidden;
+  box-shadow:var(--shadow-soft);border:1.5px solid rgba(27,79,122,.07);
+  display:grid;grid-template-columns:64px 1fr;column-gap:1.7rem;align-items:center;
+}
+.phase:nth-child(2){top:114px}
+.phase:nth-child(3){top:132px}
+.phase:nth-child(4){top:150px}
+.phase .n{
+  font-family:var(--font-serif);font-size:3.2rem;font-weight:700;line-height:1;
+  color:var(--azul-principal);display:block;grid-row:1/3;
+}
+.phase:nth-child(3) .n{color:var(--azul-texto)}
+.phase:nth-child(4) .n{color:var(--azul-profundo)}
+.phase h3{font-size:1.25rem;margin-bottom:.35rem;grid-column:2}
+.phase p{font-size:.9rem;color:var(--texto-suave);line-height:1.65;grid-column:2;max-width:62ch}
+.phase .bar{position:absolute;left:0;top:0;height:100%;width:5px}
+.phase:nth-child(1) .bar{background:var(--azul-suave)}
+.phase:nth-child(2) .bar{background:#6BAED6}
+.phase:nth-child(3) .bar{background:var(--azul-principal)}
+.phase:nth-child(4) .bar{background:#1B4F7A}
+@media(max-width:640px){
+  .phase{grid-template-columns:48px 1fr;padding:1.8rem;column-gap:1.1rem}
+  .phase .n{font-size:2.4rem}
+}
+/* sinais */
+.signs{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+.signs-card{background:#fff;border-radius:24px;padding:2.2rem;box-shadow:0 10px 34px rgba(27,79,122,.07)}
+.signs-card h3{font-size:1.2rem;margin-bottom:1.2rem;display:flex;align-items:center;gap:.7rem}
+.signs-card h3 svg{width:22px;height:22px;color:var(--azul-texto)}
+@media(max-width:920px){.signs{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar" role="complementary" aria-label="Contato rápido">
+  <div class="container">
+    <a href="tel:+5511932152598" aria-label="Ligar para a clínica">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +55 11 93215-2598
+    </a>
+    <span class="addr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Av. Brig. Faria Lima, 1597 — sala 1009 · Jardim Paulistano, SP
+    </span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="CPCS-SP — início">
+      <img class="logo-mark" src="assets/img/logo-simbolo.png" alt="">
+      <span class="logo-text"><b>CPCS-SP</b><small>Centro de Controle de Stress-SP</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="clinica.html">A Clínica</a>
+      <a href="index.html">Início</a>
+      <a href="livros.html" class="nav-livros">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Livros
+      </a>
+      <a href="atuacao.html">Áreas de Atuação</a>
+      <a href="unidades.html">Unidades</a>
+      <a href="estresse.html" class="active" aria-current="page">O que é estresse?</a>
+      <a href="artigos.html">Artigos</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="exterior.html">Brasileiros no Exterior</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-blob"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Você está em">
+      <a href="index.html">Início</a><span class="sep">◆</span><span>O que é estresse?</span>
+    </nav>
+    <span class="eyebrow">Educação em saúde</span>
+    <h1>O que é <em>estresse</em>, afinal?</h1>
+    <p class="lead">O estresse é uma reação natural do organismo diante de desafios. O problema não é senti-lo — é quando ele deixa de proteger e passa a adoecer.</p>
+  </div>
+</section>
+
+<!-- DEFINIÇÃO -->
+<section class="section" style="padding-top:2rem" aria-label="Definição de estresse">
+  <div class="container split">
+    <div class="split-copy">
+      <span class="eyebrow reveal">O bom e o mau stress</span>
+      <h2 class="reveal">Uma reação que nasceu para nos <em>proteger</em></h2>
+      <p class="reveal">Diante de um desafio, o corpo se prepara: coração acelera, músculos se tensionam, a atenção se aguça. Em doses certas, essa ativação — o chamado <strong>eustress</strong> — nos move para provas, entrevistas e conquistas.</p>
+      <p class="reveal">Quando a pressão é intensa demais ou dura tempo demais, a mesma reação se volta contra nós: é o <strong>distress</strong>, que desgasta o corpo, embota as emoções e abre portas para ansiedade, hipertensão e queda de imunidade.</p>
+      <p class="reveal">A boa notícia, demonstrada pela pesquisa da Prof. Dra. Marilda Lipp: o stress excessivo <strong>tem tratamento</strong> — e o equilíbrio pode ser treinado.</p>
+    </div>
+    <figure class="split-photo reveal">
+      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1100&q=75" alt="Pessoa meditando em ambiente sereno ao pôr do sol" loading="lazy">
+    </figure>
+  </div>
+</section>
+
+<!-- AS 4 FASES -->
+<section class="section section-tinted" aria-label="As quatro fases do stress">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Modelo quadrifásico de Lipp</span>
+      <h2>As quatro <em>fases</em> do stress</h2>
+      <p class="lead">A pesquisa da Prof. Dra. Marilda Lipp identificou que o stress evolui em fases — e quanto mais cedo se age, mais simples é a recuperação.</p>
+    </div>
+    <div class="phases">
+      <article class="phase reveal">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="n">1</span>
+        <h3>Alerta</h3>
+        <p>O corpo se prepara para o desafio: energia, foco e produtividade aumentam. É a fase do stress bom — desde que passageira.</p>
+      </article>
+      <article class="phase reveal">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="n">2</span>
+        <h3>Resistência</h3>
+        <p>A tensão persiste e o organismo gasta energia para se reequilibrar. Surgem cansaço, dificuldade de memória e vulnerabilidade a doenças.</p>
+      </article>
+      <article class="phase reveal">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="n">3</span>
+        <h3>Quase-exaustão</h3>
+        <p>As defesas começam a ceder: oscilação emocional, ansiedade e os primeiros sintomas físicos mais sérios aparecem.</p>
+      </article>
+      <article class="phase reveal">
+        <span class="bar" aria-hidden="true"></span>
+        <span class="n">4</span>
+        <h3>Exaustão</h3>
+        <p>O desgaste é profundo: depressão, doenças físicas e incapacidade de trabalhar ou se concentrar. É a fase que exige ajuda profissional imediata.</p>
+      </article>
+    </div>
+    <!-- CTA intermediário -->
+    <div class="cta-inline reveal">
+      <div>
+        <b>Em qual fase você se reconheceu?</b>
+        <span>Uma avaliação estruturada mostra onde você está e o que fazer a partir daí.</span>
+      </div>
+      <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Agendar avaliação</a>
+    </div>
+  </div>
+</section>
+
+<!-- SINAIS -->
+<section class="section" aria-label="Sinais de alerta">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Fique atento</span>
+      <h2>Sinais de que é hora de <em>buscar ajuda</em></h2>
+    </div>
+    <div class="signs">
+      <div class="signs-card reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>No corpo</h3>
+        <ul class="checklist">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Tensão muscular, dores de cabeça e no corpo</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Insônia ou sono que não descansa</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Problemas digestivos e queda de imunidade</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Pressão alta e palpitações</li>
+        </ul>
+      </div>
+      <div class="signs-card reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>Na mente e nas emoções</h3>
+        <ul class="checklist">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Irritabilidade e explosões desproporcionais</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Ansiedade constante e preocupação sem pausa</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Dificuldade de concentração e memória</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Desânimo, apatia e perda de prazer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="container inner reveal">
+    <span class="eyebrow">Reconheceu os sinais?</span>
+    <h2>Quanto antes, mais simples a <em>recuperação</em>.</h2>
+    <p>Uma avaliação estruturada mostra em que fase você está e qual o melhor caminho.</p>
+    <div class="btns">
+      <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Agendar avaliação</a>
+      <a class="btn btn-light" href="livros.html">Ler mais nos livros</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="CPCS-SP — início">
+          <img class="logo-full" src="assets/img/logo-cpcs.png" alt="CPCS-SP — Centro de Controle de Stress-SP" loading="lazy">
+        </a>
+        <p>Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Ciência, acolhimento e o método TCS para devolver o equilíbrio a pessoas, famílias e empresas.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <h4>Instituto</h4>
+        <ul>
+          <li><a href="clinica.html">A Clínica</a></li>
+          <li><a href="index.html#profissionais">Profissionais</a></li>
+          <li><a href="atuacao.html">Áreas de Atuação</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="exterior.html">Brasileiros no Exterior</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Conhecimento</h4>
+        <ul>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="artigos.html">Artigos e Publicações</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="cursos.html#eventos">Eventos</a></li>
+          <li><a href="cursos.html#galeria">Galeria de fotos</a></li>
+          <li><a href="estresse.html">O que é estresse?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5511932152598">+55 11 93215-2598</a></li>
+          <li><a href="https://wa.me/5511932152598" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.estressesp.com.br">www.estressesp.com.br</a></li>
+          <li>Av. Brig. Faria Lima, 1597<br>sala 1009 · 10º andar<br>Jardim Paulistano · São Paulo/SP<br>CEP 01452-917</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <b>CPCS-SP</b> — Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Todos os direitos reservados.</span>
+      <span>Psicologia baseada em evidências · São Paulo</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="site.js" defer></script>
+</body>
+</html>

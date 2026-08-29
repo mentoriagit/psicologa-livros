@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artigos e Publicações — CPCS-SP | Centro de Controle de Stress-SP</title>
+<meta name="description" content="Artigos e publicações do CPCS-SP sobre stress, burnout, regulação emocional, stress infantil e saúde no trabalho, com base na pesquisa da Prof. Dra. Marilda Lipp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="canonical" href="https://www.estressesp.com.br/artigos.html">
+<style>
+.articles{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.article-card{
+  background:#fff;border-radius:24px;padding:2.1rem 1.9rem;display:flex;flex-direction:column;
+  border:1.5px solid rgba(27,79,122,.06);
+  box-shadow:0 8px 26px rgba(27,79,122,.06);
+  transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s,border-color .4s;
+}
+.article-card:hover{transform:translateY(-4px);border-color:var(--azul-claro);box-shadow:var(--shadow-soft)}
+.article-card .tag{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--azul-texto);margin-bottom:1rem;
+}
+.article-card h3{font-size:1.15rem;line-height:1.35;margin-bottom:.6rem}
+.article-card p{font-size:.87rem;color:var(--texto-suave);line-height:1.6;flex:1}
+.article-card .meta{
+  margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid rgba(27,79,122,.08);
+  font-size:.74rem;color:var(--texto-suave);display:flex;justify-content:space-between;
+}
+@media(max-width:920px){.articles{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.articles{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar" role="complementary" aria-label="Contato rápido">
+  <div class="container">
+    <a href="tel:+5511932152598" aria-label="Ligar para a clínica">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +55 11 93215-2598
+    </a>
+    <span class="addr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Av. Brig. Faria Lima, 1597 — sala 1009 · Jardim Paulistano, SP
+    </span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="CPCS-SP — início">
+      <img class="logo-mark" src="assets/img/logo-simbolo.png" alt="">
+      <span class="logo-text"><b>CPCS-SP</b><small>Centro de Controle de Stress-SP</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="clinica.html">A Clínica</a>
+      <a href="index.html">Início</a>
+      <a href="livros.html" class="nav-livros">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Livros
+      </a>
+      <a href="atuacao.html">Áreas de Atuação</a>
+      <a href="unidades.html">Unidades</a>
+      <a href="estresse.html">O que é estresse?</a>
+      <a href="artigos.html" class="active" aria-current="page">Artigos</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="exterior.html">Brasileiros no Exterior</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-blob"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Você está em">
+      <a href="index.html">Início</a><span class="sep">◆</span><span>Artigos e Publicações</span>
+    </nav>
+    <span class="eyebrow">Artigos e publicações</span>
+    <h1>Conhecimento que <em>circula</em></h1>
+    <p class="lead">Textos curtos e acessíveis sobre stress, emoções e saúde — escritos a partir da prática clínica e da pesquisa do CPCS-SP.</p>
+  </div>
+</section>
+
+<!-- ARTIGOS -->
+<section class="section" style="padding-top:2rem" aria-label="Lista de artigos">
+  <div class="container">
+    <!-- ============================================================
+         LISTA DE ARTIGOS — renderizada a partir de data/artigos.js.
+         Para escrever ou editar um artigo, edite APENAS o arquivo
+         data/artigos.js (instruções em COMO-ATUALIZAR.md). Artigos
+         com texto completo ganham link para a página de leitura
+         (artigo.html) automaticamente.
+         ============================================================ -->
+    <div class="articles" id="artigosGrid"></div>
+    <!-- CTA intermediário -->
+    <div class="cta-inline reveal">
+      <div>
+        <b>Algum tema tocou em algo seu?</b>
+        <span>A equipe do CPCS-SP pode ajudar a transformar leitura em cuidado.</span>
+      </div>
+      <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUÇÃO CIENTÍFICA -->
+<section class="section section-cream" aria-label="Produção científica">
+  <div class="container split">
+    <div class="split-copy">
+      <span class="eyebrow reveal">Base científica</span>
+      <h2 class="reveal">Por trás de cada texto, décadas de <em>pesquisa</em></h2>
+      <p class="reveal">A produção do CPCS-SP se apoia no trabalho acadêmico da Prof. Dra. Marilda Lipp — incluindo o modelo quadrifásico do stress e o ISSL, instrumento de avaliação utilizado em pesquisas e consultórios de todo o país.</p>
+      <p class="reveal">Para se aprofundar, conheça os livros publicados pela nossa equipe.</p>
+      <div style="margin-top:2rem" class="reveal">
+        <a class="btn btn-amber" href="livros.html">Ver os livros</a>
+      </div>
+    </div>
+    <figure class="split-photo reveal" style="aspect-ratio:4/3.4">
+      <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1100&q=75" alt="Estante de biblioteca com livros" loading="lazy">
+    </figure>
+  </div>
+</section>
+</main>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="container inner reveal">
+    <span class="eyebrow">Continue lendo</span>
+    <h2>Quer receber os próximos <em>artigos</em>?</h2>
+    <p>Fale com a gente pelo WhatsApp e peça para entrar na lista de conteúdos do CPCS-SP.</p>
+    <div class="btns">
+      <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Entrar na lista</a>
+      <a class="btn btn-light" href="livros.html">Explorar os livros</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="CPCS-SP — início">
+          <img class="logo-full" src="assets/img/logo-cpcs.png" alt="CPCS-SP — Centro de Controle de Stress-SP" loading="lazy">
+        </a>
+        <p>Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Ciência, acolhimento e o método TCS para devolver o equilíbrio a pessoas, famílias e empresas.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <h4>Instituto</h4>
+        <ul>
+          <li><a href="clinica.html">A Clínica</a></li>
+          <li><a href="index.html#profissionais">Profissionais</a></li>
+          <li><a href="atuacao.html">Áreas de Atuação</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="exterior.html">Brasileiros no Exterior</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Conhecimento</h4>
+        <ul>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="artigos.html">Artigos e Publicações</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="cursos.html#eventos">Eventos</a></li>
+          <li><a href="cursos.html#galeria">Galeria de fotos</a></li>
+          <li><a href="estresse.html">O que é estresse?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5511932152598">+55 11 93215-2598</a></li>
+          <li><a href="https://wa.me/5511932152598" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.estressesp.com.br">www.estressesp.com.br</a></li>
+          <li>Av. Brig. Faria Lima, 1597<br>sala 1009 · 10º andar<br>Jardim Paulistano · São Paulo/SP<br>CEP 01452-917</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <b>CPCS-SP</b> — Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Todos os direitos reservados.</span>
+      <span>Psicologia baseada em evidências · São Paulo</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data/artigos.js"></script>
+<script src="conteudo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="site.js" defer></script>
+</body>
+</html>

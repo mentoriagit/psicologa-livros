@@ -1,0 +1,4 @@
+# Netlify — rotas limpas
+# /exterior é o link curto para divulgação da landing de brasileiros no exterior
+/exterior   /exterior.html   200
+/exterior/  /exterior.html   200

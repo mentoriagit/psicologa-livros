@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contato — CPCS-SP | Centro de Controle de Stress-SP</title>
+<meta name="description" content="Fale com o CPCS-SP: WhatsApp +55 11 93215-2598, telefone e endereço no Jardim Paulistano, São Paulo. Agende sua avaliação presencial ou online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="canonical" href="https://www.estressesp.com.br/contato.html">
+<style>
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:stretch}
+.contact-info{
+  background:#fff;border-radius:32px;padding:2.8rem 2.6rem;
+  display:flex;flex-direction:column;gap:1.9rem;box-shadow:0 10px 34px rgba(27,79,122,.07);
+}
+.contact-form{
+  background:var(--azul-profundo);border-radius:32px;padding:2.8rem 2.6rem;color:#fff;
+  box-shadow:var(--shadow-lift);
+}
+.contact-form h2{color:#fff;font-size:1.6rem;margin-bottom:.6rem}
+.contact-form>p{color:rgba(244,250,253,.65);font-size:.9rem;margin-bottom:1.8rem}
+.field{margin-bottom:1.2rem}
+.field label{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--azul-suave);display:block;margin-bottom:.45rem;
+}
+.field input,.field textarea{
+  width:100%;background:rgba(244,250,253,.07);border:1px solid rgba(244,250,253,.16);
+  border-radius:14px;padding:.9rem 1.1rem;color:#fff;font-family:inherit;font-size:.92rem;
+  transition:border-color .25s,background .25s;
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--azul-claro);background:rgba(244,250,253,.1)}
+.field textarea{min-height:110px;resize:vertical}
+@media(max-width:920px){.contact-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar" role="complementary" aria-label="Contato rápido">
+  <div class="container">
+    <a href="tel:+5511932152598" aria-label="Ligar para a clínica">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +55 11 93215-2598
+    </a>
+    <span class="addr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Av. Brig. Faria Lima, 1597 — sala 1009 · Jardim Paulistano, SP
+    </span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="CPCS-SP — início">
+      <img class="logo-mark" src="assets/img/logo-simbolo.png" alt="">
+      <span class="logo-text"><b>CPCS-SP</b><small>Centro de Controle de Stress-SP</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="clinica.html">A Clínica</a>
+      <a href="index.html">Início</a>
+      <a href="livros.html" class="nav-livros">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Livros
+      </a>
+      <a href="atuacao.html">Áreas de Atuação</a>
+      <a href="unidades.html">Unidades</a>
+      <a href="estresse.html">O que é estresse?</a>
+      <a href="artigos.html">Artigos</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="exterior.html">Brasileiros no Exterior</a>
+      <a href="contato.html" class="active" aria-current="page">Contato</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-blob"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Você está em">
+      <a href="index.html">Início</a><span class="sep">◆</span><span>Contato</span>
+    </nav>
+    <span class="eyebrow">Contato</span>
+    <h1>Vamos <em>conversar</em>?</h1>
+    <p class="lead">Tire dúvidas, agende uma avaliação ou leve o CPCS-SP para a sua empresa. Respondemos rápido em horário comercial.</p>
+  </div>
+</section>
+
+<!-- CANAIS + FORMULÁRIO -->
+<section class="section" style="padding-top:2rem" aria-label="Canais de contato">
+  <div class="container contact-grid">
+    <aside class="contact-info reveal">
+      <div class="info-block">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <div>
+          <small>Telefone / WhatsApp</small>
+          <b><a href="https://wa.me/5511932152598" target="_blank" rel="noopener">+55 11 93215-2598</a></b>
+          <span>Resposta rápida em horário comercial</span>
+        </div>
+      </div>
+      <div class="info-block">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <div>
+          <small>Endereço</small>
+          <b>Av. Brigadeiro Faria Lima, 1597 — sala 1009</b>
+          <span>10º andar · Jardim Paulistano · São Paulo/SP · CEP 01452-917</span>
+        </div>
+      </div>
+      <div class="info-block">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+        <div>
+          <small>Atendimento</small>
+          <b>Presencial e online</b>
+          <span>Adultos, crianças, famílias e empresas</span>
+        </div>
+      </div>
+      <div>
+        <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </aside>
+
+    <div class="contact-form reveal">
+      <h2>Envie uma mensagem</h2>
+      <p>Preencha os campos e a mensagem será aberta no seu WhatsApp, pronta para enviar.</p>
+      <form id="waForm">
+        <div class="field">
+          <label for="fNome">Seu nome</label>
+          <input id="fNome" name="nome" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="fAssunto">Assunto</label>
+          <input id="fAssunto" name="assunto" type="text" placeholder="Ex.: agendar avaliação, palestra para empresa…">
+        </div>
+        <div class="field">
+          <label for="fMsg">Mensagem</label>
+          <textarea id="fMsg" name="mensagem" required></textarea>
+        </div>
+        <button class="btn btn-amber" type="submit">Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="margin-top:5.5rem">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="CPCS-SP — início">
+          <img class="logo-full" src="assets/img/logo-cpcs.png" alt="CPCS-SP — Centro de Controle de Stress-SP" loading="lazy">
+        </a>
+        <p>Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Ciência, acolhimento e o método TCS para devolver o equilíbrio a pessoas, famílias e empresas.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <h4>Instituto</h4>
+        <ul>
+          <li><a href="clinica.html">A Clínica</a></li>
+          <li><a href="index.html#profissionais">Profissionais</a></li>
+          <li><a href="atuacao.html">Áreas de Atuação</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="exterior.html">Brasileiros no Exterior</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Conhecimento</h4>
+        <ul>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="artigos.html">Artigos e Publicações</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="cursos.html#eventos">Eventos</a></li>
+          <li><a href="cursos.html#galeria">Galeria de fotos</a></li>
+          <li><a href="estresse.html">O que é estresse?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5511932152598">+55 11 93215-2598</a></li>
+          <li><a href="https://wa.me/5511932152598" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.estressesp.com.br">www.estressesp.com.br</a></li>
+          <li>Av. Brig. Faria Lima, 1597<br>sala 1009 · 10º andar<br>Jardim Paulistano · São Paulo/SP<br>CEP 01452-917</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <b>CPCS-SP</b> — Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Todos os direitos reservados.</span>
+      <span>Psicologia baseada em evidências · São Paulo</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="site.js" defer></script>
+<script>
+document.getElementById("waForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  var nome = document.getElementById("fNome").value.trim();
+  var assunto = document.getElementById("fAssunto").value.trim();
+  var msg = document.getElementById("fMsg").value.trim();
+  var texto = "Olá! Meu nome é " + nome + "." +
+    (assunto ? " Assunto: " + assunto + "." : "") + "\n\n" + msg;
+  window.open("https://wa.me/5511932152598?text=" + encodeURIComponent(texto), "_blank", "noopener");
+});
+</script>
+</body>
+</html>

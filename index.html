@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPCS-SP — Centro de Controle de Stress-SP | Tratamento do stress em São Paulo</title>
+<meta name="description" content="Clínica de referência no tratamento do stress em São Paulo: método TCS, TCC e biofeedback, presencial e online. E a biblioteca da Prof. Dra. Marilda Lipp, para consulta e estudo.">
+<meta property="og:title" content="CPCS-SP — Centro de Controle de Stress-SP">
+<meta property="og:description" content="Clínica de referência no tratamento do stress — método TCS, TCC e biofeedback. Prof. Dra. Marilda Lipp · Jardim Paulistano, São Paulo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.estressesp.com.br/">
+<link rel="canonical" href="https://www.estressesp.com.br/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<style>
+/* ---- Hero da Home: a clínica ---- */
+.home-hero{padding:5rem 0 6rem;overflow:hidden}
+.home-hero .hero-blob{
+  position:absolute;top:-180px;right:-160px;width:640px;height:640px;border-radius:50%;
+  background:radial-gradient(circle at 40% 40%,rgba(107,174,214,.38),rgba(107,174,214,0) 68%);
+  filter:blur(60px);pointer-events:none;
+}
+.home-hero .hero-blob2{
+  position:absolute;bottom:-220px;left:-200px;width:560px;height:560px;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%,rgba(46,124,184,.18),rgba(46,124,184,0) 70%);
+  filter:blur(50px);pointer-events:none;
+}
+.home-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:4rem;align-items:center;position:relative}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:#fff;border:1px solid rgba(27,79,122,.1);border-radius:999px;
+  padding:.5rem 1.15rem;font-size:.78rem;font-weight:600;color:var(--azul-profundo);
+  box-shadow:0 8px 24px rgba(27,79,122,.08);margin-bottom:1.6rem;
+}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--azul-principal);box-shadow:0 0 0 4px rgba(46,124,184,.2)}
+.home-hero h1{font-size:clamp(2.6rem,5.2vw,4.2rem);letter-spacing:-.015em;margin-bottom:1.4rem}
+.home-hero p.lead{margin-bottom:2.2rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+/* foto do consultório
+   (para trocar a foto, basta substituir o arquivo assets/img/consultorio-01.jpg) */
+.hero-photo{position:relative}
+.hero-photo img{
+  width:100%;aspect-ratio:4/4.15;object-fit:cover;display:block;
+  border-radius:22px;box-shadow:-18px 30px 60px rgba(27,79,122,.3);
+}
+.hero-photo .fan-badge{top:auto;bottom:18px;right:18px}
+/* faixa "A Clínica" logo após o hero (pedido do cliente 2026-08-17:
+   a abertura do site é a clínica; os livros vêm depois, como consulta) */
+.clinic-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+@media(max-width:920px){.clinic-pillars{grid-template-columns:1fr}}
+.fan-badge{
+  position:absolute;top:8px;right:0;z-index:4;
+  background:rgba(255,255,255,.78);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.8);border-radius:18px;
+  padding:.85rem 1.15rem;box-shadow:var(--shadow-soft);max-width:220px;
+}
+.fan-badge small{
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--azul-texto);display:block;margin-bottom:.2rem;
+}
+.fan-badge b{font-size:.86rem;color:var(--azul-profundo);line-height:1.35;display:block}
+@media(max-width:920px){
+  .home-hero{padding:2.6rem 0 3.5rem}
+  .home-hero-grid{grid-template-columns:1fr;gap:2.6rem}
+  .home-hero h1{font-size:clamp(2.1rem,8vw,3rem)}
+  .hero-photo img{aspect-ratio:4/3}
+}
+/* (CSS da estante horizontal e do stack-up movido para livros.html
+   junto com as seções, em 2026-08-17) */
+/* stats da clínica */
+.mini-stats{display:flex;gap:2.6rem;flex-wrap:wrap;margin-top:2.2rem}
+.mini-stat b{font-family:var(--font-mono);font-size:1.7rem;font-weight:600;color:var(--azul-profundo);display:block;line-height:1.1}
+.mini-stat b i{font-style:normal;color:var(--azul-texto)}
+.mini-stat span{font-size:.78rem;color:var(--texto-suave);letter-spacing:.05em}
+/* depoimento curto */
+.quote-sec{padding:4.5rem 0}
+.mini-quote{max-width:720px;margin-inline:auto;text-align:center}
+.mini-quote blockquote{
+  font-family:var(--font-serif);font-style:italic;font-weight:500;
+  font-size:clamp(1.35rem,2.6vw,1.9rem);line-height:1.5;color:var(--azul-profundo);
+  margin-bottom:1.4rem;
+}
+.mini-quote blockquote::before{content:"“ ";color:var(--azul-claro)}
+.mini-quote blockquote::after{content:" ”";color:var(--azul-claro)}
+.mini-quote figcaption{font-size:.86rem;color:var(--texto-suave)}
+.mini-quote figcaption b{color:var(--azul-profundo)}
+.mini-quote small{display:block;font-size:.7rem;font-style:italic;margin-top:.5rem;color:var(--texto-suave)}
+/* ============================================================
+   PROFISSIONAIS — CSS movido da antiga página profissionais.html
+   em 2026-08-17 (a aba foi removida; o conteúdo vive na Home).
+   ============================================================ */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+@media(max-width:920px){.team-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.team-grid{grid-template-columns:1fr}}
+.eliana-photo{
+  border-radius:32px;overflow:hidden;aspect-ratio:4/4.6;max-width:440px;
+  background:linear-gradient(150deg,var(--azul-suave),var(--azul-claro));
+  box-shadow:var(--shadow-lift);
+}
+/* a foto atual é bem vertical: ancorar o corte no topo centraliza o rosto no quadro */
+.eliana-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.cred-badges{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:3rem}
+.cred-badges li{
+  background:var(--branco);border:1.5px solid rgba(27,79,122,.08);border-radius:18px;
+  padding:1.1rem 1.3rem;display:flex;align-items:center;gap:.85rem;
+  box-shadow:0 6px 20px rgba(27,79,122,.05);
+}
+.cred-badges .bic{
+  width:38px;height:38px;border-radius:12px;background:var(--azul-suave);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.cred-badges .bic svg{width:19px;height:19px;color:var(--azul-profundo)}
+.cred-badges b{font-size:.82rem;color:var(--azul-profundo);line-height:1.35;font-weight:600}
+@media(max-width:1060px){.cred-badges{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:920px){.eliana-photo{margin-inline:auto;aspect-ratio:4/4}}
+@media(max-width:560px){.cred-badges{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar" role="complementary" aria-label="Contato rápido">
+  <div class="container">
+    <a href="tel:+5511932152598" aria-label="Ligar para a clínica">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +55 11 93215-2598
+    </a>
+    <span class="addr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Av. Brig. Faria Lima, 1597 — sala 1009 · Jardim Paulistano, SP
+    </span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="CPCS-SP — início">
+      <img class="logo-mark" src="assets/img/logo-simbolo.png" alt="">
+      <span class="logo-text"><b>CPCS-SP</b><small>Centro de Controle de Stress-SP</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="clinica.html">A Clínica</a>
+      <a href="index.html" class="active" aria-current="page">Início</a>
+      <a href="livros.html" class="nav-livros">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Livros
+      </a>
+      <a href="atuacao.html">Áreas de Atuação</a>
+      <a href="unidades.html">Unidades</a>
+      <a href="estresse.html">O que é estresse?</a>
+      <a href="artigos.html">Artigos</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="exterior.html">Brasileiros no Exterior</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO — a clínica
+     (ajuste 2026-08, feedback do cliente: a abertura da home passou a ser
+      pela clínica, e não pelos livros — os livros ficam como referência
+      de consulta e conhecimento, logo abaixo) -->
+<section class="home-hero" aria-label="Centro de Controle de Stress-SP">
+  <div class="hero-blob"></div>
+  <div class="hero-blob2"></div>
+  <div class="container home-hero-grid">
+    <div>
+      <span class="hero-badge"><span class="dot"></span>Clínica · Jardim Paulistano, São Paulo</span>
+      <h1>O stress tem <em>tratamento</em>. E ele começa aqui.</h1>
+      <p class="lead">Fundado no trabalho pioneiro da Prof. Dra. Marilda Lipp, o Centro de Controle de Stress-SP aplica o método TCS — terapia cognitivo-comportamental, biofeedback e treino de controle do stress — em um programa estruturado de 12 sessões. Atendimento presencial e online.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Agendar uma avaliação</a>
+        <a class="btn btn-ghost" href="clinica.html">Conhecer a clínica</a>
+      </div>
+      <div class="mini-stats">
+        <div class="mini-stat"><b><span data-contar="20">20</span><i>+</i></b><span>anos de experiência</span></div>
+        <div class="mini-stat"><b data-contar="12">12</b><span>sessões estruturadas</span></div>
+        <div class="mini-stat"><b data-contar="8">8</b><span>especialidades</span></div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/img/consultorio-01.jpg" alt="Consultório do CPCS-SP com mesa de atendimento, poltronas e estante de madeira" fetchpriority="high">
+      <div class="fan-badge">
+        <small>Método TCS</small>
+        <b>Um programa com começo, meio e fim</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     A CLÍNICA EM PRIMEIRO — reordenado em 2026-08-17 a pedido do
+     cliente: ao abrir o site, o destaque é o atendimento; a estante
+     de livros vem depois, como material de referência e consulta.
+     ============================================================ -->
+<section class="section" style="padding-top:2.5rem;padding-bottom:2rem" aria-label="A clínica">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">A Clínica</span>
+      <h2>Cuidado <em>especializado</em> no controle do stress</h2>
+      <p class="lead">Psicologia baseada em evidências para reequilibrar corpo, emoções e rotina — no consultório ou de onde você estiver.</p>
+    </div>
+    <div class="clinic-pillars">
+      <article class="spec-card reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg></span>
+        <h3>Método TCS</h3>
+        <p>O Treino de Controle do Stress, criado pela Prof. Dra. Marilda Lipp, é referência científica no Brasil no tratamento do stress emocional.</p>
+      </article>
+      <article class="spec-card reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+        <h3>Presencial e online</h3>
+        <p>Consultório no Jardim Paulistano, em São Paulo, e atendimento online — inclusive para brasileiros que vivem no exterior.</p>
+      </article>
+      <article class="spec-card reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3>Equipe supervisionada</h3>
+        <p>Psicólogos especializados em terapia cognitivo-comportamental, formados e supervisionados na tradição de pesquisa do CPCS-SP.</p>
+      </article>
+    </div>
+    <div class="cta-inline reveal">
+      <div>
+        <b>Quer conhecer a clínica e a equipe?</b>
+        <span>Veja como funciona o atendimento e quem cuida de você.</span>
+      </div>
+      <a class="btn btn-amber" href="clinica.html">Conhecer a clínica</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROFISSIONAIS — conteúdo MOVIDO da antiga página
+     profissionais.html em 2026-08-17 (aba removida a pedido do
+     cliente; tudo vive na Home). Âncora: index.html#profissionais
+     ============================================================ -->
+<section class="section section-cream" id="profissionais" aria-label="Profissionais">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Profissionais</span>
+      <h2>Quem cuida de quem <em>cuida</em> de você</h2>
+      <p class="lead">Uma equipe de psicólogos especializados em terapia cognitivo-comportamental, formada e supervisionada dentro da tradição de pesquisa que deu origem ao CPCS-SP.</p>
+    </div>
+    <div class="split">
+      <figure class="split-photo reveal">
+        <!-- Retrato oficial enviado pelo cliente em 2026-08-16.
+             object-position ancora o corte no rosto (feedback 2026-08-17:
+             "a foto não ficou bem centralizada"). -->
+        <img src="assets/img/marilda-lipp-retrato.jpg" alt="Retrato oficial da Prof. Dra. Marilda Lipp sentada em seu escritório" loading="lazy" style="object-position:center 22%">
+      </figure>
+      <div class="split-copy">
+        <span class="eyebrow reveal">Fundadora</span>
+        <h3 class="reveal" style="font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:.6rem">Drª Marilda Emmanuel <em>Novaes Lipp</em></h3>
+        <p class="reveal" style="font-family:var(--font-mono);font-size:.78rem;letter-spacing:.1em;color:var(--azul-texto);margin-bottom:1.2rem">CRP 06/16187</p>
+        <p class="reveal">Diretora fundadora do IPCS e idealizadora do Treino de Controle do Stress (TCS), a Drª Marilda Lipp tem uma grande experiência na área de stress e qualidade de vida no Brasil, Estados Unidos, China e Europa. Psicóloga pela American University, mestre e PhD pela George Washington University, e pós-doutorado, com bolsa da FAPESP, em Stress Social realizado no National Institute of Health dos EUA.</p>
+        <p class="reveal">É Presidente da Academia Paulista de Psicologia (cadeira número 7 – Oscar Freire) e Presidente Interina da Academia Brasileira de Psicologia. Foi presidente da Federação Brasileira de Terapias Cognitivas (2015-2019) e da Associação Brasileira de Stress. É autora/coautora/organizadora de 34 livros na área da Psicologia e mais de 100 artigos científicos. Orientou 72 teses de Mestrado e Doutorado sobre o stress na PUC Campinas, onde lecionou e foi diretora do Laboratório de Estudos Psicofisiológicos do Stress.</p>
+        <p class="reveal">Foi editora-chefe da Revista Estudos de Psicologia e do Boletim da Academia Paulista de Psicologia. Como psicóloga clínica, é certificada pela FBTC e pelo Board of Psychologists do estado de Maryland, e é citada em vários Who's Who da Europa e dos EUA. É membro da World Wide Women's Association e da APA.</p>
+        <p class="reveal">É considerada a pioneira dos estudos de stress na América Latina, resultado das inúmeras pesquisas que coordenou pelo IPCS.</p>
+        <div style="margin-top:2rem;display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap" class="reveal">
+          <!-- TODO: substituir pelo arquivo oficial do logo IPCS -->
+          <img src="assets/img/logo-ipcs.png" alt="Logo do IPCS — Instituto de Psicologia e Controle do Stress Marilda Lipp" style="max-height:64px;width:auto" loading="lazy" onerror="this.style.display='none'">
+          <a class="btn btn-amber" href="livros.html">Conhecer os livros</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRETORA — Dra. Eliana A. Torrezan da Silva
+     Para trocar a foto: substitua assets/img/dra-eliana.jpg -->
+<section class="section" aria-label="Sobre a Dra. Eliana">
+  <div class="container">
+    <div class="split">
+      <figure class="eliana-photo reveal">
+        <img src="assets/img/dra-eliana.jpg" alt="Retrato da Dra. Eliana A. Torrezan da Silva" loading="lazy">
+      </figure>
+      <div class="split-copy">
+        <span class="eyebrow reveal">Diretora</span>
+        <h3 class="reveal" style="font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:1.2rem">Dra. Eliana A. <em>Torrezan</em> da Silva</h3>
+        <!-- Correção 2026-08-17 (cliente): o nome antigo "Instituto de Psicologia e
+             Controle do Stress – SP" foi riscado — usar o nome atual da clínica. -->
+        <p class="reveal">Doutora e pós-doutora pela PUC-Campinas. Diretora do Centro de Controle de Stress-SP (CPCS-SP). Professora do Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp; AMBAN – Instituto de Psiquiatria, Faculdade de Medicina da Universidade de São Paulo (USP); pós-graduação em Saúde e Saúde Mental pela Santa Casa – FMSP.</p>
+        <p class="reveal">Foi membro da diretoria da Federação Brasileira de Terapias Cognitivas (2011–2013). Coautora de capítulos de livros e artigos científicos. Membro da American Psychological Association (APA) e da Ordem dos Psicólogos Portugueses.</p>
+      </div>
+    </div>
+    <ul class="cred-badges reveal" aria-label="Credenciais e afiliações">
+      <li>
+        <span class="bic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
+        <b>PUC-Campinas</b>
+      </li>
+      <li>
+        <span class="bic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="m12 2 9 5H3z"/></svg></span>
+        <b>USP – AMBAN</b>
+      </li>
+      <li>
+        <span class="bic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></span>
+        <b>APA Member</b>
+      </li>
+      <li>
+        <span class="bic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <b>Ordem dos Psicólogos Portugueses</b>
+      </li>
+    </ul>
+    <div class="cta-inline reveal">
+      <div>
+        <b>Quer ser atendido pela equipe do CPCS-SP?</b>
+        <span>Atendimento presencial no Jardim Paulistano ou online.</span>
+      </div>
+      <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Agendar conversa</a>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section class="section section-cream" aria-label="Nossa equipe" style="padding-top:3rem">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">A equipe</span>
+      <h2>Especialistas para cada <em>fase</em> da vida</h2>
+      <p class="lead">Todos os psicólogos do CPCS-SP trabalham com protocolos baseados em evidências e passam por supervisão clínica contínua.</p>
+    </div>
+    <div class="team-grid">
+      <article class="spec-card reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg></span>
+        <h3>Psicólogos clínicos — adultos</h3>
+        <p>Especialistas em TCC e no método TCS para ansiedade, depressão, stress ocupacional e transtornos relacionados.</p>
+      </article>
+      <article class="spec-card reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 2.5c-.8 0-1.5-.4-1.5-1"/></svg></span>
+        <h3>Especialistas em infância e adolescência</h3>
+        <p>Atendimento a crianças e adolescentes, do stress escolar à preparação emocional para o vestibular.</p>
+      </article>
+      <article class="spec-card reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+        <h3>Saúde da mulher e gestação</h3>
+        <p>Acompanhamento emocional na gravidez e no pós-parto, para uma maternidade com mais presença e menos medo.</p>
+      </article>
+      <article class="spec-card reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+        <h3>Especialistas em biofeedback</h3>
+        <p>Profissionais treinados no uso de biofeedback para monitorar e ensinar o corpo a responder melhor ao stress.</p>
+      </article>
+      <article class="spec-card reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/></svg></span>
+        <h3>Consultores corporativos</h3>
+        <p>Psicólogos dedicados a programas de bem-estar, check-up de stress e palestras em empresas e escolas.</p>
+      </article>
+      <article class="spec-card reveal">
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
+        <h3>Supervisores e formadores</h3>
+        <p>Docentes responsáveis pelos cursos de formação em TCC e pela supervisão clínica de psicólogos.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTO — curto e discreto -->
+<section class="quote-sec" aria-label="Depoimento">
+  <div class="container">
+    <figure class="mini-quote reveal">
+      <blockquote>Em poucas semanas de TCS, entendi meus gatilhos e recuperei o meu sono.</blockquote>
+      <figcaption>
+        <b>R. M.</b> · paciente do CPCS-SP
+        <small>Depoimento ilustrativo, para preservar o sigilo e a privacidade dos pacientes.</small>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============================================================
+     LIVROS FORA DA HOME (pedido do cliente 2026-08-17): a estante
+     horizontal e o stack-up "Três leituras" foram MOVIDOS para
+     livros.html — a Home não exibe mais livros.
+     ============================================================ -->
+
+<!-- ============================================================
+     EVENTOS E CURSOS — renderizado a partir de data/eventos.js.
+     A seção SOME SOZINHA se não houver evento com ativo: true.
+     Para editar a agenda: abra data/eventos.js (ver COMO-ATUALIZAR.md).
+     ============================================================ -->
+<section class="section" id="eventosHome" aria-label="Eventos e cursos" hidden>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Agenda</span>
+      <h2>Eventos e <em>cursos</em></h2>
+      <p class="lead">Palestras, cursos e workshops conduzidos pela equipe do CPCS-SP.</p>
+    </div>
+    <div class="events-grid" id="eventosHomeGrid"></div>
+    <div style="margin-top:2.2rem">
+      <a class="btn btn-ghost" href="cursos.html#eventos">Ver a agenda completa</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- CTA FINAL -->
+<div class="cta-band">
+  <div class="container inner reveal">
+    <span class="eyebrow">Vamos conversar?</span>
+    <h2>O stress tem <em>tratamento</em>.</h2>
+    <p>Agende uma avaliação e descubra como o método TCS pode devolver o seu equilíbrio.</p>
+    <div class="btns">
+      <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn btn-light" href="contato.html">Página de contato</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="CPCS-SP — início">
+          <img class="logo-full" src="assets/img/logo-cpcs.png" alt="CPCS-SP — Centro de Controle de Stress-SP" loading="lazy">
+        </a>
+        <p>Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Ciência, acolhimento e o método TCS para devolver o equilíbrio a pessoas, famílias e empresas.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <h4>Instituto</h4>
+        <ul>
+          <li><a href="clinica.html">A Clínica</a></li>
+          <li><a href="index.html#profissionais">Profissionais</a></li>
+          <li><a href="atuacao.html">Áreas de Atuação</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="exterior.html">Brasileiros no Exterior</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Conhecimento</h4>
+        <ul>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="artigos.html">Artigos e Publicações</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="cursos.html#eventos">Eventos</a></li>
+          <li><a href="cursos.html#galeria">Galeria de fotos</a></li>
+          <li><a href="estresse.html">O que é estresse?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5511932152598">+55 11 93215-2598</a></li>
+          <li><a href="https://wa.me/5511932152598" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.estressesp.com.br">www.estressesp.com.br</a></li>
+          <li>Av. Brig. Faria Lima, 1597<br>sala 1009 · 10º andar<br>Jardim Paulistano · São Paulo/SP<br>CEP 01452-917</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <b>CPCS-SP</b> — Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Todos os direitos reservados.</span>
+      <span>Psicologia baseada em evidências · São Paulo</span>
+    </div>
+  </div>
+</footer>
+
+<script src="data/eventos.js"></script>
+<script src="conteudo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="site.js" defer></script>
+<script>
+/* ============================================================
+   Animações exclusivas da Home (rodam só se GSAP carregar e o
+   usuário não tiver pedido menos movimento).
+   A estante horizontal e seu script foram MOVIDOS para livros.html
+   em 2026-08-17 (a Home não exibe mais livros).
+   ============================================================ */
+document.addEventListener("DOMContentLoaded", function () {
+  "use strict";
+  var reduzido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduzido) return;
+
+  /* Hero: a foto do consultório surge suavemente */
+  if (window.gsap && document.querySelector(".hero-photo")) {
+    gsap.fromTo(".hero-photo", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: .8, ease: "power2.out", delay: .15 });
+    gsap.from(".hero-photo .fan-badge", { opacity: 0, y: 16, duration: .5, delay: .75 });
+  }
+});
+</script>
+</body>
+</html>

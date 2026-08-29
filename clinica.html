@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Clínica — CPCS-SP | Centro de Controle de Stress-SP</title>
+<meta name="description" content="Conheça o CPCS-SP: clínica de referência no tratamento do stress em São Paulo, fundada no trabalho pioneiro da Prof. Dra. Marilda Lipp. Método TCS em 12 sessões.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="canonical" href="https://www.estressesp.com.br/clinica.html">
+<style>
+/* pilares do método — cartões que empilham no scroll (sticky nativo) */
+.pillars{display:grid;gap:1.4rem}
+.pillar{
+  background:#fff;border-radius:26px;padding:2.3rem 2.6rem;position:sticky;top:96px;
+  box-shadow:var(--shadow-soft);border:1.5px solid rgba(27,79,122,.07);
+  display:grid;grid-template-columns:auto auto 1fr;column-gap:1.6rem;align-items:center;
+}
+.pillar:nth-child(2){top:114px}
+.pillar:nth-child(3){top:132px}
+.pillar:nth-child(4){top:150px}
+.pillar .num{
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.24em;color:var(--azul-texto);
+  grid-row:1/3;white-space:nowrap;
+}
+.pillar .ic{
+  width:50px;height:50px;border-radius:16px;background:var(--azul-suave);
+  display:grid;place-items:center;grid-row:1/3;
+}
+.pillar .ic svg{width:24px;height:24px;color:var(--azul-profundo)}
+.pillar h3{font-size:1.25rem;margin-bottom:.35rem;grid-column:3}
+.pillar p{font-size:.9rem;color:var(--texto-suave);line-height:1.6;grid-column:3;max-width:60ch}
+@media(max-width:640px){
+  .pillar{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem;padding:1.8rem}
+  .pillar p{max-width:none}
+}
+.sessions-band{
+  margin-top:1.3rem;background:var(--azul-profundo);color:#fff;border-radius:24px;
+  display:flex;align-items:center;gap:2.5rem;padding:2.5rem 3rem;
+}
+.sessions-band .big12{
+  font-family:var(--font-serif);font-size:clamp(4rem,8vw,6.5rem);font-weight:700;
+  color:var(--azul-claro);line-height:1;flex-shrink:0;
+}
+.sessions-band h3{color:#fff;font-size:clamp(1.2rem,2.2vw,1.6rem);max-width:24ch}
+.sessions-band p{color:rgba(244,250,253,.7);font-size:.9rem;max-width:52ch}
+@media(max-width:640px){
+  .sessions-band{flex-direction:column;align-items:flex-start;gap:1rem;padding:2.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar" role="complementary" aria-label="Contato rápido">
+  <div class="container">
+    <a href="tel:+5511932152598" aria-label="Ligar para a clínica">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +55 11 93215-2598
+    </a>
+    <span class="addr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Av. Brig. Faria Lima, 1597 — sala 1009 · Jardim Paulistano, SP
+    </span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="CPCS-SP — início">
+      <img class="logo-mark" src="assets/img/logo-simbolo.png" alt="">
+      <span class="logo-text"><b>CPCS-SP</b><small>Centro de Controle de Stress-SP</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="clinica.html" class="active" aria-current="page">A Clínica</a>
+      <a href="index.html">Início</a>
+      <a href="livros.html" class="nav-livros">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Livros
+      </a>
+      <a href="atuacao.html">Áreas de Atuação</a>
+      <a href="unidades.html">Unidades</a>
+      <a href="estresse.html">O que é estresse?</a>
+      <a href="artigos.html">Artigos</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="exterior.html">Brasileiros no Exterior</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-blob"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Você está em">
+      <a href="index.html">Início</a><span class="sep">◆</span><span>A Clínica</span>
+    </nav>
+    <span class="eyebrow">A clínica</span>
+    <h1>Ciência, acolhimento e uma escuta que <em>transforma</em></h1>
+    <p class="lead">Há mais de duas décadas, o Centro de Controle de Stress-SP devolve qualidade de vida a adultos, crianças, famílias e empresas — com atendimento presencial em São Paulo e online.</p>
+  </div>
+</section>
+
+<!-- HISTÓRIA -->
+<section class="section" style="padding-top:2rem" aria-label="Nossa história">
+  <div class="container split">
+    <figure class="split-photo reveal">
+      <img src="assets/img/consultorio-01.jpg" alt="Consultório do CPCS-SP com mesa de atendimento, poltronas e estante de madeira" loading="lazy">
+    </figure>
+    <div class="split-copy">
+      <span class="eyebrow reveal">Desde 2000</span>
+      <h2 class="reveal">Nascida da <em>pesquisa</em>, feita para cuidar</h2>
+      <p class="reveal">O CPCS-SP nasceu do trabalho pioneiro da Prof. Dra. Marilda Lipp, referência internacional na pesquisa do stress e criadora do Treino de Controle do Stress (TCS), método com eficácia comprovada em estudos científicos.</p>
+      <p class="reveal">Nossa equipe de psicólogos especializados atende com protocolos estruturados, metas claras e resultados mensuráveis — sempre unindo rigor científico e acolhimento humano.</p>
+      <ul class="checklist reveal">
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Método TCS criado pela Prof. Dra. Marilda Lipp</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Terapia cognitivo comportamental</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Biofeedback para monitorar e treinar respostas do corpo</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Atendimento presencial e online, individual e corporativo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO TCS -->
+<section class="section section-tinted" aria-label="O método TCS">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">O método TCS</span>
+      <h2>Quatro pilares para <em>desarmar</em> o stress</h2>
+      <p class="lead">O Treino de Controle do Stress atua sobre corpo e mente ao mesmo tempo — porque o stress não escolhe apenas um deles.</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar reveal">
+        <span class="num">Pilar 01</span>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+        <h3>Alimentação</h3>
+        <p>Repor os nutrientes consumidos nos períodos de stress e sustentar o corpo na recuperação.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="num">Pilar 02</span>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg></span>
+        <h3>Relaxamento</h3>
+        <p>Técnicas de respiração e relaxamento profundo para reduzir a tensão física e mental.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="num">Pilar 03</span>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+        <h3>Exercício físico</h3>
+        <p>Mais vigor e resistência, menos cansaço crônico: o movimento como aliado do equilíbrio.</p>
+      </article>
+      <article class="pillar reveal">
+        <span class="num">Pilar 04</span>
+        <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/></svg></span>
+        <h3>Psicológico</h3>
+        <p>Reestruturação cognitiva: mudar o modo estressante de pensar, sentir e agir, com técnicas da terapia cognitivo-comportamental.</p>
+      </article>
+    </div>
+    <div class="sessions-band reveal">
+      <span class="big12" aria-hidden="true">12</span>
+      <div>
+        <h3>sessões semanais para restabelecer o equilíbrio emocional e psicológico</h3>
+        <p>Um programa estruturado, com começo, meio e fim: avaliação do nível de stress, treino das quatro áreas e consolidação de hábitos que permanecem para a vida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="section" aria-label="Depoimentos">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>Histórias de quem <em>reencontrou</em> a calma</h2>
+    </div>
+    <div class="testi-grid">
+      <article class="testi-card reveal">
+        <span class="quote" aria-hidden="true">“</span>
+        <div class="stars" aria-label="5 estrelas">★★★★★</div>
+        <blockquote>Cheguei com crises de ansiedade que atrapalhavam meu trabalho e meu sono. Em poucas semanas de TCS, entendi meus gatilhos e hoje tenho ferramentas que uso todos os dias. Foi transformador.</blockquote>
+        <div class="testi-who">
+          <span class="avatar" aria-hidden="true">R.M.</span>
+          <div><b>R. M.</b><span>Paciente CPCS-SP</span></div>
+        </div>
+      </article>
+      <article class="testi-card reveal">
+        <span class="quote" aria-hidden="true">“</span>
+        <div class="stars" aria-label="5 estrelas">★★★★★</div>
+        <blockquote>O acompanhamento durante a gestação fez toda a diferença. Aprendi a respirar, a desacelerar e a viver esse momento com presença, em vez de medo. Sou muito grata à equipe.</blockquote>
+        <div class="testi-who">
+          <span class="avatar" aria-hidden="true">C.A.</span>
+          <div><b>C. A.</b><span>Paciente CPCS-SP</span></div>
+        </div>
+      </article>
+      <article class="testi-card reveal">
+        <span class="quote" aria-hidden="true">“</span>
+        <div class="stars" aria-label="5 estrelas">★★★★★</div>
+        <blockquote>Levamos o check-up de stress para nossa empresa e o resultado surpreendeu: equipes mais leves, menos afastamentos e conversas que antes não aconteciam. Recomendo demais.</blockquote>
+        <div class="testi-who">
+          <span class="avatar" aria-hidden="true">F.S.</span>
+          <div><b>F. S.</b><span>Gestora de RH · cliente corporativo</span></div>
+        </div>
+      </article>
+    </div>
+    <p class="testi-note reveal">* Depoimentos ilustrativos, criados para preservar o sigilo e a privacidade dos pacientes.</p>
+    <!-- CTA intermediário -->
+    <div class="cta-inline reveal">
+      <div>
+        <b>Quer conhecer o CPCS-SP pessoalmente?</b>
+        <span>Agende uma visita ou sua primeira avaliação.</span>
+      </div>
+      <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="container inner reveal">
+    <span class="eyebrow">Vamos conversar?</span>
+    <h2>Seu nível <em>ótimo</em> de stress começa com uma conversa.</h2>
+    <p>Agende uma avaliação com nossa equipe — presencial no Jardim Paulistano ou online.</p>
+    <div class="btns">
+      <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Agendar pelo WhatsApp</a>
+      <a class="btn btn-light" href="contato.html">Página de contato</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="CPCS-SP — início">
+          <img class="logo-full" src="assets/img/logo-cpcs.png" alt="CPCS-SP — Centro de Controle de Stress-SP" loading="lazy">
+        </a>
+        <p>Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Ciência, acolhimento e o método TCS para devolver o equilíbrio a pessoas, famílias e empresas.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <h4>Instituto</h4>
+        <ul>
+          <li><a href="clinica.html">A Clínica</a></li>
+          <li><a href="index.html#profissionais">Profissionais</a></li>
+          <li><a href="atuacao.html">Áreas de Atuação</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="exterior.html">Brasileiros no Exterior</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Conhecimento</h4>
+        <ul>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="artigos.html">Artigos e Publicações</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="cursos.html#eventos">Eventos</a></li>
+          <li><a href="cursos.html#galeria">Galeria de fotos</a></li>
+          <li><a href="estresse.html">O que é estresse?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5511932152598">+55 11 93215-2598</a></li>
+          <li><a href="https://wa.me/5511932152598" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.estressesp.com.br">www.estressesp.com.br</a></li>
+          <li>Av. Brig. Faria Lima, 1597<br>sala 1009 · 10º andar<br>Jardim Paulistano · São Paulo/SP<br>CEP 01452-917</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <b>CPCS-SP</b> — Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Todos os direitos reservados.</span>
+      <span>Psicologia baseada em evidências · São Paulo</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="site.js" defer></script>
+</body>
+</html>

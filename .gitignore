@@ -1,0 +1,39 @@
+# Local Netlify folder
+.netlify
+
+# Dependências
+node_modules/
+
+# Variáveis de ambiente / segredos
+.env
+.env.*
+!.env.example
+
+# Builds
+dist/
+build/
+
+# Deploy local
+.vercel/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Assets brutos / temporários
+*.psd
+*.ai
+*.xcf
+*.tmp
+*.bak
+*.log
+raw/
+tmp/
+temp/

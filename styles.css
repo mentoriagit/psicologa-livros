@@ -1,0 +1,436 @@
+/* ============================================================
+   CPCS-SP — Centro de Controle de Stress-SP
+   Folha de estilos compartilhada por todas as páginas
+   Paleta: azul claro e arejado (feedback da Dra. Eliana Torrezan)
+   ============================================================ */
+
+/* ---------- RESET & TOKENS ---------- */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* Paleta oficial aprovada */
+  --azul-profundo:#1B4F7A;
+  --azul-principal:#2E7CB8;
+  --azul-claro:#6BAED6;
+  --azul-suave:#C9E2F0;
+  --azul-fundo:#F4FAFD;
+  --texto:#1E2A32;
+  --texto-suave:#5B7180;
+  --branco:#FFFFFF;
+  /* Derivado do azul-principal, levemente escurecido apenas para
+     TEXTOS PEQUENOS sobre fundo claro (garante contraste AA).
+     Não usar como cor de fundo. */
+  --azul-texto:#24689C;
+  --shadow-soft:0 18px 50px rgba(27,79,122,.10);
+  --shadow-lift:0 28px 70px rgba(27,79,122,.16);
+  --radius:28px;
+  --font-serif:"Playfair Display",Georgia,serif;
+  --font-sans:"Inter",system-ui,sans-serif;
+  --font-mono:"Space Grotesk",monospace;
+}
+html{scroll-behavior:smooth;overflow-x:clip}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:var(--font-sans);
+  background:var(--branco);
+  color:var(--texto);
+  line-height:1.65;
+  /* clip (e não hidden): hidden tornaria o body um contêiner de rolagem
+     e desativaria o position:sticky dos cartões (stack-up da Home) */
+  overflow-x:clip;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.container{width:min(1200px,92%);margin-inline:auto}
+section{position:relative}
+/* âncoras (#eventos, #exterior…) não ficam escondidas sob o nav fixo */
+[id]{scroll-margin-top:96px}
+::selection{background:var(--azul-suave);color:var(--azul-profundo)}
+
+/* ---------- TIPOGRAFIA ---------- */
+.eyebrow{
+  font-family:var(--font-mono);font-size:.72rem;font-weight:500;
+  letter-spacing:.28em;text-transform:uppercase;color:var(--azul-texto);
+  display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.1rem;
+}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--azul-principal)}
+h1,h2,h3{font-family:var(--font-serif);font-weight:600;line-height:1.12;color:var(--azul-profundo)}
+h2{font-size:clamp(2rem,4.2vw,3.2rem);letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--azul-principal)}
+.lead{color:var(--texto-suave);font-size:1.06rem;max-width:56ch}
+
+/* ---------- BOTÕES ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  padding:1.05rem 2.1rem;border-radius:999px;font-weight:600;font-size:.95rem;
+  transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s,background .3s,color .3s;
+  white-space:nowrap;
+}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+/* .btn-amber mantém o nome por compatibilidade — agora é o botão primário azul */
+.btn-amber{background:var(--azul-profundo);color:var(--branco);box-shadow:0 12px 30px rgba(27,79,122,.25)}
+.btn-amber:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(27,79,122,.32)}
+.btn-ghost{border:1.5px solid rgba(27,79,122,.28);color:var(--azul-profundo)}
+.btn-ghost:hover{transform:translateY(-4px);border-color:var(--azul-principal);box-shadow:var(--shadow-soft)}
+.btn-light{background:var(--branco);color:var(--azul-profundo)}
+.btn-light:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(0,0,0,.22)}
+
+/* ---------- TOPBAR ---------- */
+.topbar{
+  background:var(--azul-profundo);color:rgba(244,250,253,.85);
+  font-size:.78rem;padding:.55rem 0;position:relative;z-index:60;
+}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.topbar a,.topbar span{display:inline-flex;align-items:center;gap:.45rem}
+.topbar svg{width:13px;height:13px;color:var(--azul-suave)}
+.topbar a:hover{color:#fff}
+@media(max-width:640px){.topbar .addr{display:none}.topbar .container{justify-content:center}}
+
+/* ---------- NAV ---------- */
+.nav{
+  position:sticky;top:0;z-index:70;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid rgba(27,79,122,.08);
+}
+.nav .container{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;height:78px}
+.logo{display:flex;align-items:center;gap:.8rem;flex-shrink:0}
+/* símbolo Psi da marca (assets/img/logo-simbolo.png) */
+.logo-mark{
+  width:46px;height:46px;border-radius:50%;background:var(--azul-suave);
+  object-fit:cover;object-position:center;
+  box-shadow:0 8px 20px rgba(107,174,214,.45);
+}
+/* logo completo da marca — usado no rodapé */
+.logo-full{max-width:300px;width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.logo-text{display:flex;flex-direction:column;line-height:1.15}
+.logo-text b{font-family:var(--font-mono);font-weight:600;letter-spacing:.14em;font-size:1.02rem;color:var(--azul-profundo)}
+.logo-text small{font-size:.62rem;color:var(--texto-suave);letter-spacing:.04em}
+.nav-links{display:flex;align-items:center;gap:1.05rem;font-size:.8rem;font-weight:500}
+.nav-links a{position:relative;color:var(--texto);padding:.3rem 0;transition:color .25s;white-space:nowrap}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--azul-principal);transition:width .3s ease}
+.nav-links a:hover{color:var(--azul-profundo)}
+.nav-links a:hover::after{width:100%}
+.nav-links a.active{color:var(--azul-profundo);font-weight:700}
+.nav-links a.active::after{width:100%}
+/* Livros — a pedido do cliente (2026-08), deixou de ser o item em destaque
+   (pílula azul) e virou um link comum: a ênfase do site é a clínica.
+   O ícone de livrinho que existe no HTML fica escondido. */
+.nav-links a.nav-livros svg{display:none}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:.5rem;z-index:70}
+.hamburger span{width:24px;height:2px;background:var(--azul-profundo);border-radius:2px;transition:.35s cubic-bezier(.22,1,.36,1)}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* breakpoint elevado para acomodar o item "Brasileiros no Exterior" */
+@media(max-width:1440px){
+  .nav-links{
+    position:fixed;inset:0;background:var(--azul-fundo);
+    flex-direction:column;align-items:center;justify-content:flex-start;gap:1.35rem;
+    font-size:1.15rem;font-family:var(--font-serif);
+    padding:6.5rem 1.5rem 3rem;overflow-y:auto;
+    opacity:0;pointer-events:none;transition:opacity .35s ease;z-index:80;
+  }
+  .nav-links.open{opacity:1;pointer-events:auto}
+  .hamburger{display:flex;position:relative;z-index:90}
+}
+
+/* ---------- PAGE HERO (interno, todas as páginas exceto Home) ---------- */
+.page-hero{padding:6.5rem 0 5rem;overflow:hidden}
+.page-hero .hero-blob{
+  position:absolute;top:-220px;right:-180px;width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle at 40% 40%,rgba(107,174,214,.4),rgba(107,174,214,0) 68%);
+  filter:blur(60px);pointer-events:none;
+}
+.page-hero .container{position:relative}
+.page-hero h1{font-size:clamp(2.5rem,5vw,4rem);letter-spacing:-.015em;margin-bottom:1.3rem;max-width:18ch}
+.page-hero .lead{font-size:1.1rem}
+.page-hero-dark{background:var(--azul-profundo);color:#fff}
+.page-hero-dark h1{color:#fff}
+.page-hero-dark .lead{color:rgba(244,250,253,.78)}
+.page-hero-dark .eyebrow{color:var(--azul-suave)}
+.page-hero-dark .eyebrow::before{background:var(--azul-suave)}
+.breadcrumb{
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--texto-suave);margin-bottom:2.2rem;display:inline-flex;gap:.6rem;align-items:center;
+}
+.breadcrumb a:hover{color:var(--azul-texto)}
+.breadcrumb .sep{color:var(--azul-principal)}
+.page-hero-dark .breadcrumb{color:rgba(244,250,253,.6)}
+@media(max-width:640px){
+  .page-hero{padding:3.5rem 0 3rem}
+  .page-hero h1{font-size:clamp(1.9rem,7.5vw,2.5rem)}
+  .page-hero .lead{font-size:1rem}
+  h2{font-size:clamp(1.7rem,6vw,2.4rem)}
+}
+
+/* ---------- SEÇÕES GENÉRICAS ----------
+   Fundos alternam entre --branco e --azul-fundo.
+   ".section-cream" mantém o nome por compatibilidade — hoje é o
+   fundo azul-fundo (#F4FAFD). */
+.section{padding:6.5rem 0}
+.section-cream{background:var(--azul-fundo);border-radius:56px;overflow:hidden}
+.section-head{max-width:640px;margin-bottom:3.4rem}
+.section-head.center{text-align:center;margin-inline:auto}
+.section-head.center .eyebrow{justify-content:center}
+.section-head p.lead{margin-top:1.1rem}
+@media(max-width:920px){.section{padding:4.5rem 0}.section-cream{border-radius:36px}}
+
+/* ---------- CARDS DE ESPECIALIDADE ---------- */
+.spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.3rem}
+.spec-card{
+  background:var(--branco);border-radius:22px;padding:1.9rem 1.7rem;
+  border:1.5px solid rgba(27,79,122,.07);
+  box-shadow:0 8px 26px rgba(27,79,122,.06);
+  transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s,border-color .4s;
+}
+.spec-card:hover{transform:translateY(-4px);border-color:var(--azul-claro);box-shadow:var(--shadow-soft)}
+.spec-card .ic{
+  width:46px;height:46px;border-radius:14px;background:rgba(107,174,214,.18);
+  display:grid;place-items:center;margin-bottom:1.1rem;
+}
+.spec-card .ic svg{width:22px;height:22px;color:var(--azul-profundo)}
+.spec-card h3{font-size:1.08rem;margin-bottom:.4rem;line-height:1.3}
+.spec-card p{font-size:.83rem;color:var(--texto-suave);line-height:1.55}
+@media(max-width:1060px){.spec-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.spec-grid{grid-template-columns:1fr}}
+
+/* ---------- CHECKLIST ---------- */
+.checklist{margin-top:1.9rem;display:grid;gap:.95rem}
+.checklist li{display:flex;gap:.9rem;align-items:flex-start;font-weight:500;color:var(--texto)}
+.checklist .chk{
+  width:26px;height:26px;border-radius:50%;background:var(--azul-suave);
+  display:grid;place-items:center;flex-shrink:0;margin-top:.1rem;
+}
+.checklist .chk svg{width:13px;height:13px;color:var(--azul-profundo)}
+
+/* ---------- DUAS COLUNAS COM FOTO ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.split-photo{
+  border-radius:32px;overflow:hidden;aspect-ratio:4/4.4;
+  background:linear-gradient(150deg,var(--azul-suave),var(--azul-claro));
+  box-shadow:var(--shadow-lift);
+}
+.split-photo img{width:100%;height:100%;object-fit:cover}
+.split-copy h2{margin-bottom:1.3rem}
+.split-copy p{color:var(--texto-suave);margin-bottom:1.1rem}
+@media(max-width:920px){
+  .split{grid-template-columns:1fr;gap:3rem}
+  .split-photo{max-width:520px;margin-inline:auto;width:100%;aspect-ratio:4/3.4}
+}
+
+/* ---------- LIVROS ---------- */
+.book-cover{
+  border-radius:14px;overflow:hidden;aspect-ratio:3/4.15;position:relative;
+  background:linear-gradient(160deg,#2E7CB8,#1B4F7A);
+  box-shadow:-14px 22px 44px rgba(27,79,122,.3);
+}
+.book-cover::after{
+  content:"";position:absolute;inset:0;border-radius:14px;
+  box-shadow:inset 3px 0 8px rgba(255,255,255,.14),inset -2px 0 6px rgba(0,0,0,.2);
+  pointer-events:none;
+}
+.book-cover img{width:100%;height:100%;object-fit:cover}
+/* capa estilizada para obras sem imagem — variações em tons de azul */
+.book-cover.stylized{
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:1.5rem 1.3rem;color:var(--azul-suave);
+}
+.book-cover.stylized .pub{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--azul-suave)}
+.book-cover.stylized .ttl{font-family:var(--font-serif);font-size:1.25rem;font-weight:600;line-height:1.25;color:#fff}
+.book-cover.stylized .aut{font-size:.66rem;letter-spacing:.06em;color:rgba(244,250,253,.78)}
+.book-cover.stylized::before{
+  content:"";position:absolute;top:-40px;right:-60px;width:180px;height:180px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,226,240,.32),transparent 70%);
+}
+.book-cover.st-sage{background:linear-gradient(165deg,#4E97C8,#24689C)}
+.book-cover.st-amber{background:linear-gradient(165deg,#3E89C0,#1B4F7A)}
+.book-cover.st-cream{background:linear-gradient(165deg,#2E7CB8,#16405F)}
+
+/* grid da página livros */
+.books-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem 2rem}
+.book-item{display:flex;flex-direction:column;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.book-item:hover{transform:translateY(-4px)}
+.book-item .book-cover{margin-bottom:1.3rem}
+.book-item h3{font-size:1.15rem;line-height:1.35;margin-bottom:.35rem}
+.book-item .authors{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;color:var(--azul-texto);margin-bottom:.6rem;display:block}
+.book-item p{font-size:.87rem;color:var(--texto-suave);line-height:1.6}
+@media(max-width:920px){.books-grid{grid-template-columns:repeat(2,1fr);gap:2.2rem 1.4rem}}
+@media(max-width:560px){.books-grid{grid-template-columns:1fr;max-width:320px;margin-inline:auto}}
+
+/* ---------- DEPOIMENTOS ---------- */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.testi-card{
+  background:var(--branco);border-radius:24px;padding:2.4rem 2.1rem 2rem;position:relative;
+  box-shadow:0 10px 34px rgba(27,79,122,.07);
+  transition:transform .4s cubic-bezier(.22,1,.36,1),box-shadow .4s;
+  display:flex;flex-direction:column;
+}
+.testi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}
+.testi-card .quote{
+  font-family:var(--font-serif);font-size:4rem;line-height:1;color:var(--azul-claro);
+  position:absolute;top:1.1rem;left:1.8rem;opacity:.85;
+}
+.stars{color:var(--azul-principal);letter-spacing:.2em;font-size:.85rem;margin:1rem 0 .9rem}
+.testi-card blockquote{font-size:.94rem;color:var(--texto);line-height:1.7;flex:1}
+.testi-who{display:flex;align-items:center;gap:.9rem;margin-top:1.6rem}
+.testi-who .avatar{
+  width:44px;height:44px;border-radius:50%;background:var(--azul-profundo);color:var(--azul-suave);
+  display:grid;place-items:center;font-family:var(--font-mono);font-size:.8rem;font-weight:600;
+}
+.testi-who b{font-size:.88rem;color:var(--azul-profundo);display:block;line-height:1.3}
+.testi-who span{font-size:.72rem;color:var(--texto-suave)}
+.testi-note{text-align:center;font-size:.72rem;color:var(--texto-suave);margin-top:2.2rem;font-style:italic}
+@media(max-width:920px){.testi-grid{grid-template-columns:1fr;max-width:520px;margin-inline:auto}}
+
+/* ---------- INFO BLOCKS (contato) ---------- */
+.info-block{display:flex;gap:1.1rem;align-items:flex-start}
+.info-block .ic{
+  width:46px;height:46px;border-radius:14px;background:rgba(107,174,214,.18);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.info-block .ic svg{width:21px;height:21px;color:var(--azul-profundo)}
+.info-block small{
+  font-family:var(--font-mono);font-size:.62rem;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--azul-texto);display:block;margin-bottom:.3rem;
+}
+.info-block b{font-size:.95rem;color:var(--azul-profundo);display:block;line-height:1.5;font-weight:600}
+.info-block span{font-size:.82rem;color:var(--texto-suave);line-height:1.6;display:block}
+.info-block a:hover{color:var(--azul-texto)}
+
+/* ---------- SEÇÃO TINGIDA (para stack-up) ----------
+   Igual à .section-cream, mas SEM overflow:hidden — necessário
+   para cartões com position:sticky (o overflow quebraria o sticky). */
+.section-tinted{background:var(--azul-fundo);border-radius:56px}
+@media(max-width:920px){.section-tinted{border-radius:36px}}
+
+/* ---------- CTA INLINE (meio de página) ----------
+   Chamada discreta para inserir no fim de uma seção:
+   <div class="cta-inline reveal"><div><b>Título</b><span>apoio</span></div><a class="btn btn-amber" …>Ação</a></div> */
+.cta-inline{
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+  background:linear-gradient(135deg,var(--azul-suave),var(--azul-fundo));
+  border:1.5px solid rgba(27,79,122,.1);border-radius:24px;
+  padding:2rem 2.4rem;margin-top:3.5rem;
+}
+.cta-inline b{font-family:var(--font-serif);font-size:1.25rem;font-weight:600;color:var(--azul-profundo);display:block;line-height:1.35;margin-bottom:.2rem}
+.cta-inline span{font-size:.88rem;color:var(--texto-suave)}
+.cta-inline .btn{flex-shrink:0}
+@media(max-width:640px){.cta-inline{padding:1.6rem;justify-content:center;text-align:center;margin-top:2.5rem}}
+
+/* ---------- CTA BAND (fim de página) ---------- */
+.cta-band{background:var(--azul-profundo);padding:6rem 0;margin-top:5.5rem;border-radius:56px 56px 0 0}
+.cta-band .inner{text-align:center;max-width:640px;margin-inline:auto}
+.cta-band .eyebrow{color:var(--azul-suave);justify-content:center}
+.cta-band .eyebrow::before{background:var(--azul-suave)}
+.cta-band h2{color:#fff;margin-bottom:1.4rem}
+.cta-band p{color:rgba(244,250,253,.75);margin-bottom:2.4rem}
+.cta-band .btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.cta-band .btn-amber{background:var(--branco);color:var(--azul-profundo);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.cta-band .btn-light{background:transparent;border:1.5px solid rgba(244,250,253,.4);color:#fff}
+.cta-band .btn-light:hover{border-color:#fff;box-shadow:none}
+@media(max-width:920px){.cta-band{border-radius:36px 36px 0 0;padding:4.5rem 0;margin-top:4rem}}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--azul-profundo);color:rgba(244,250,253,.75);padding:5rem 0 0;border-top:1px solid rgba(107,174,214,.18)}
+.cta-band+footer{border-top:1px solid rgba(107,174,214,.18);margin-top:0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:3rem;padding-bottom:3.5rem}
+.footer-grid h4{
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--azul-suave);margin-bottom:1.3rem;font-weight:500;
+}
+.footer-grid ul{display:grid;gap:.65rem;font-size:.86rem}
+.footer-grid a{transition:color .25s}
+.footer-grid a:hover{color:#fff}
+.footer-brand p{font-size:.86rem;margin-top:1.2rem;max-width:34ch;line-height:1.7}
+.footer-brand .logo-text b{color:#fff}
+.footer-brand .logo-text small{color:rgba(244,250,253,.6)}
+.footer-bottom{
+  border-top:1px solid rgba(244,250,253,.12);padding:1.5rem 0;
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.76rem;
+}
+.footer-bottom b{color:var(--azul-suave);font-weight:600}
+@media(max-width:920px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr}}
+
+/* ---------- TRAVA DE TELA NO CELULAR ----------
+   A página só se move na vertical, sem balanço lateral nem
+   "elástico" ao passar do fim. As áreas de rolagem horizontal
+   (estante, leque) continuam deslizando normalmente. */
+@media(max-width:920px){
+  html,body{overscroll-behavior-y:none}
+  body{touch-action:pan-y pinch-zoom}
+  .hscroll,.no-fan .fan-stage{touch-action:pan-x pan-y}
+}
+
+/* ---------- TOQUE (celular/tablet) ----------
+   Sem mouse não existe hover de verdade: o toque "gruda" o estado
+   de hover e os elementos pulam ao arrastar o dedo. Aqui nenhum
+   hover se move em telas de toque. */
+@media(hover:none){
+  .btn:hover,.btn-amber:hover,.btn-ghost:hover,.btn-light:hover,
+  .spec-card:hover,.book-item:hover,.testi-card:hover,
+  .event-card:hover,.course-card:hover,.article-card:hover{transform:none}
+}
+
+/* ---------- EVENTOS (compartilhado: Home e página Cursos) ---------- */
+.events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.event-card{
+  background:var(--branco);border-radius:24px;padding:1.9rem 1.8rem;
+  display:flex;flex-direction:column;gap:.85rem;
+  border:1.5px solid rgba(27,79,122,.07);
+  box-shadow:0 8px 26px rgba(27,79,122,.06);
+  transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s;
+}
+.event-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}
+.event-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem}
+.event-tag{
+  font-family:var(--font-mono);font-size:.6rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;
+  background:var(--azul-suave);color:var(--azul-profundo);
+  padding:.45rem .9rem;border-radius:999px;margin-top:.3rem;
+}
+.event-date{
+  text-align:center;background:var(--azul-fundo);
+  border:1px solid rgba(27,79,122,.1);border-radius:14px;
+  padding:.5rem .8rem;min-width:64px;
+}
+.event-date b{font-family:var(--font-serif);font-size:1.5rem;color:var(--azul-profundo);display:block;line-height:1.1}
+.event-date span{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--azul-texto)}
+.event-card h3{font-size:1.12rem;line-height:1.35}
+.event-card p{
+  font-size:.87rem;color:var(--texto-suave);line-height:1.6;flex:1;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.event-place{display:flex;gap:.5rem;align-items:center;font-size:.8rem;color:var(--texto-suave)}
+.event-place svg{width:15px;height:15px;color:var(--azul-principal);flex-shrink:0}
+.event-btn{align-self:flex-start;padding:.7rem 1.5rem;font-size:.85rem}
+@media(max-width:920px){.events-grid{grid-template-columns:1fr}}
+
+/* ---------- GALERIA DE FOTOS (data/galeria.js) ---------- */
+.galeria-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.1rem}
+.galeria-grid figure{
+  margin:0;border-radius:18px;overflow:hidden;position:relative;
+  aspect-ratio:4/3;background:var(--azul-suave);
+  box-shadow:0 8px 26px rgba(27,79,122,.08);
+}
+.galeria-grid img{width:100%;height:100%;object-fit:cover;display:block}
+.galeria-grid figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:.9rem 1.1rem .8rem;
+  background:linear-gradient(180deg,rgba(27,79,122,0),rgba(27,79,122,.78));
+  color:#fff;font-size:.78rem;line-height:1.4;
+}
+@media(max-width:560px){.galeria-grid{grid-template-columns:1fr 1fr;gap:.7rem}}
+
+/* ---------- REVEAL (animação de entrada) ----------
+   Com GSAP ativo (html.gsap-on), o estado inicial vem do CSS e a
+   transição fica por conta do ScrollTrigger. Sem GSAP, o fallback
+   por IntersectionObserver usa a transição abaixo. */
+.reveal{transition:opacity .7s cubic-bezier(.5,1,.89,1),transform .7s cubic-bezier(.5,1,.89,1)}
+.js .reveal{opacity:0;transform:translateY(26px)}
+.js .reveal.in{opacity:1;transform:none}
+.gsap-on .reveal{transition:none}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none}
+}

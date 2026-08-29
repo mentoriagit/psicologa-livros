@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidades — CPCS-SP | Centro de Controle de Stress-SP</title>
+<meta name="description" content="Matriz em Campinas, Unidade São Paulo (CPCS-SP), Rio de Janeiro e Cuiabá — além do atendimento online. Endereços, telefones e e-mails das unidades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="canonical" href="https://www.estressesp.com.br/unidades.html">
+<style>
+.unit-card{
+  background:#fff;border-radius:32px;overflow:hidden;
+  box-shadow:0 10px 34px rgba(27,79,122,.07);
+  display:grid;grid-template-columns:1fr 1fr;
+}
+.unit-card+.unit-card{margin-top:2rem}
+.unit-photo{min-height:340px;background:linear-gradient(150deg,#6BAED6,#1B4F7A)}
+.unit-photo img{width:100%;height:100%;object-fit:cover}
+.unit-body{padding:3rem;display:flex;flex-direction:column;gap:1.5rem;justify-content:center}
+.unit-body h2{font-size:1.7rem}
+@media(max-width:920px){
+  .unit-card{grid-template-columns:1fr}
+  .unit-photo{min-height:240px}
+  .unit-body{padding:2.2rem}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar" role="complementary" aria-label="Contato rápido">
+  <div class="container">
+    <a href="tel:+5511932152598" aria-label="Ligar para a clínica">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      +55 11 93215-2598
+    </a>
+    <span class="addr">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      Av. Brig. Faria Lima, 1597 — sala 1009 · Jardim Paulistano, SP
+    </span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="CPCS-SP — início">
+      <img class="logo-mark" src="assets/img/logo-simbolo.png" alt="">
+      <span class="logo-text"><b>CPCS-SP</b><small>Centro de Controle de Stress-SP</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="clinica.html">A Clínica</a>
+      <a href="index.html">Início</a>
+      <a href="livros.html" class="nav-livros">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Livros
+      </a>
+      <a href="atuacao.html">Áreas de Atuação</a>
+      <a href="unidades.html" class="active" aria-current="page">Unidades</a>
+      <a href="estresse.html">O que é estresse?</a>
+      <a href="artigos.html">Artigos</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="exterior.html">Brasileiros no Exterior</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-blob"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Você está em">
+      <a href="index.html">Início</a><span class="sep">◆</span><span>Unidades</span>
+    </nav>
+    <span class="eyebrow">Unidades</span>
+    <h1>Onde <em>encontrar</em> o CPCS-SP</h1>
+    <p class="lead">Matriz em Campinas e unidades em São Paulo, Rio de Janeiro e Cuiabá — além do atendimento online.</p>
+  </div>
+</section>
+
+<!-- UNIDADES PRESENCIAIS — dados confirmados pelo cliente (rodada 2026-08) -->
+<section class="section" style="padding-top:2rem" aria-label="Nossas unidades">
+  <div class="container">
+
+    <!-- MATRIZ — CAMPINAS/SP (sem foto por enquanto: cliente não tem foto
+         da unidade; o cartão fica só com as informações. Quando a foto
+         chegar, devolva o <figure class="unit-photo"> e remova o style) -->
+    <article class="unit-card reveal" style="grid-template-columns:1fr">
+      <div class="unit-body">
+        <div>
+          <span class="eyebrow">Matriz · Presencial</span>
+          <h2>Matriz — Campinas/SP</h2>
+        </div>
+        <div class="info-block">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <small>Endereço</small>
+            <b>Rua Camargo Paes, 538 — Guanabara</b>
+            <span>Campinas/SP · CEP 13073-350</span>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div>
+            <small>Contato</small>
+            <b><a href="mailto:cpcs.matriz@estresse.com.br">cpcs.matriz@estresse.com.br</a></b>
+            <span><a href="tel:+551932340288">(19) 3234-0288</a> · <a href="https://wa.me/5519999100288" target="_blank" rel="noopener">(19) 99910-0288 (WhatsApp)</a></span>
+          </div>
+        </div>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn btn-amber" href="https://maps.google.com/?q=Rua+Camargo+Paes,+538+-+Guanabara,+Campinas+-+SP,+13073-350" target="_blank" rel="noopener">Ver no mapa</a>
+          <a class="btn btn-ghost" href="https://wa.me/5519999100288" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="unit-card reveal">
+      <figure class="unit-photo">
+        <img src="assets/img/consultorio-01.jpg" alt="Consultório do CPCS-SP na Av. Brigadeiro Faria Lima, com mesa e poltronas de atendimento" loading="lazy">
+      </figure>
+      <div class="unit-body">
+        <div>
+          <span class="eyebrow">Presencial</span>
+          <h2>Unidade São Paulo (CPCS-SP)</h2>
+        </div>
+        <div class="info-block">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <small>Endereço</small>
+            <b>Av. Brigadeiro Faria Lima, 1597 — sala 1009</b>
+            <span>10º andar · Jardim Paulistano · São Paulo/SP · CEP 01452-917</span>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div>
+            <small>Horário</small>
+            <b>Segunda a sexta, em horário comercial</b>
+            <span>Agendamento prévio pelo WhatsApp ou telefone</span>
+          </div>
+        </div>
+        <div>
+          <a class="btn btn-amber" href="https://maps.google.com/?q=Av.+Brigadeiro+Faria+Lima,+1597+-+Jardim+Paulistano,+S%C3%A3o+Paulo+-+SP,+01452-917" target="_blank" rel="noopener">Ver no mapa</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="unit-card reveal">
+      <figure class="unit-photo">
+        <img src="https://images.unsplash.com/photo-1587560699334-cc4ff634909a?w=1100&q=75" alt="Pessoa em videochamada em ambiente tranquilo" loading="lazy">
+      </figure>
+      <div class="unit-body">
+        <div>
+          <span class="eyebrow">Online</span>
+          <h2>Atendimento a distância</h2>
+        </div>
+        <div class="info-block">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+          <div>
+            <small>Como funciona</small>
+            <b>Sessões por videochamada, com a mesma estrutura do presencial</b>
+            <span>Atendimento em português, onde você estiver</span>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
+          <div>
+            <small>Sigilo garantido</small>
+            <b>Plataformas seguras e conformidade ética</b>
+            <span>Mesmo sigilo profissional do atendimento presencial</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn btn-ghost" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Agendar sessão online</a>
+          <a class="btn btn-ghost" href="exterior.html">Moro no exterior</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- RIO DE JANEIRO — BOTAFOGO (sem foto por enquanto) -->
+    <article class="unit-card reveal" style="grid-template-columns:1fr">
+      <div class="unit-body">
+        <div>
+          <span class="eyebrow">Presencial</span>
+          <h2>Rio de Janeiro — RJ (Botafogo)</h2>
+        </div>
+        <div class="info-block">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <div>
+            <small>Responsável</small>
+            <b>Dra. Lucia Emmanoel Novaes Malagris</b>
+            <span><a href="https://www.estresse.com.br/nossa-equipe/" target="_blank" rel="noopener">Conhecer a equipe</a></span>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div>
+            <small>Contato</small>
+            <b><a href="mailto:cpcs.rj@estresse.com.br">cpcs.rj@estresse.com.br</a></b>
+            <span><a href="https://wa.me/5521967311132" target="_blank" rel="noopener">WhatsApp: (21) 96731-1132</a></span>
+          </div>
+        </div>
+        <div>
+          <a class="btn btn-amber" href="https://wa.me/5521967311132" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- CUIABÁ — MT (sem foto por enquanto) -->
+    <article class="unit-card reveal" style="grid-template-columns:1fr">
+      <div class="unit-body">
+        <div>
+          <span class="eyebrow">Presencial</span>
+          <h2>Cuiabá — MT</h2>
+        </div>
+        <div class="info-block">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+          <div>
+            <small>Contato</small>
+            <b><a href="mailto:cpcs.cuiaba@estresse.com.br">cpcs.cuiaba@estresse.com.br</a></b>
+            <span>Escreva para agendar ou tirar dúvidas</span>
+          </div>
+        </div>
+        <div>
+          <a class="btn btn-amber" href="mailto:cpcs.cuiaba@estresse.com.br">Enviar e-mail</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+</main>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="container inner reveal">
+    <span class="eyebrow">Perto de você</span>
+    <h2>Presencial ou online, o cuidado é o <em>mesmo</em>.</h2>
+    <p>Escolha o formato que cabe na sua rotina e agende a primeira conversa.</p>
+    <div class="btns">
+      <a class="btn btn-amber" href="https://wa.me/5511932152598" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn btn-light" href="contato.html">Página de contato</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" aria-label="CPCS-SP — início">
+          <img class="logo-full" src="assets/img/logo-cpcs.png" alt="CPCS-SP — Centro de Controle de Stress-SP" loading="lazy">
+        </a>
+        <p>Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Ciência, acolhimento e o método TCS para devolver o equilíbrio a pessoas, famílias e empresas.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <h4>Instituto</h4>
+        <ul>
+          <li><a href="clinica.html">A Clínica</a></li>
+          <li><a href="index.html#profissionais">Profissionais</a></li>
+          <li><a href="atuacao.html">Áreas de Atuação</a></li>
+          <li><a href="unidades.html">Unidades</a></li>
+          <li><a href="exterior.html">Brasileiros no Exterior</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h4>Conhecimento</h4>
+        <ul>
+          <li><a href="livros.html">Livros</a></li>
+          <li><a href="artigos.html">Artigos e Publicações</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="cursos.html#eventos">Eventos</a></li>
+          <li><a href="cursos.html#galeria">Galeria de fotos</a></li>
+          <li><a href="estresse.html">O que é estresse?</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="tel:+5511932152598">+55 11 93215-2598</a></li>
+          <li><a href="https://wa.me/5511932152598" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.estressesp.com.br">www.estressesp.com.br</a></li>
+          <li>Av. Brig. Faria Lima, 1597<br>sala 1009 · 10º andar<br>Jardim Paulistano · São Paulo/SP<br>CEP 01452-917</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <b>CPCS-SP</b> — Instituto de Psicologia e Centro de Controle de Stress Marilda Lipp. Todos os direitos reservados.</span>
+      <span>Psicologia baseada em evidências · São Paulo</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+<script src="site.js" defer></script>
+</body>
+</html>
